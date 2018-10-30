@@ -1,0 +1,202 @@
+body {
+    background: black;
+    color: white;
+    margin: 0;
+    font-size: 16px;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+}
+
+#tribute-info {
+    margin: auto;
+    width: 500px;
+    font-family: Arial;
+}
+
+p {
+    z-index: 200;
+}
+
+.blink {
+    animation: blink 2s infinite;
+}
+
+section {
+    height: 100vh;
+    z-index: -20;
+    padding: 30px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.33;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.33;
+    }
+}
+
+#twitter {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    animation: blink 2s infinite;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    padding: 2px;
+}
+
+#twitter:hover {
+    opacity: 0.5;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background: white;
+    color: black;
+    margin: auto;
+    font-family: Arial;
+}
+
+#madewith {
+    margin-right: 5px;
+}
+
+#byjespancer {
+    margin-left: 5px;
+}
+
+#section2 {
+    background: white;
+    color: black;
+    position: relative;
+}
+
+h2 {
+    position: absolute;
+    z-index: -2;
+    font-size: 449px;
+    opacity: 0.05;
+    margin: auto;
+}
+
+#quotes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: auto;
+}
+
+.quote {
+    margin: auto;
+    width: 250px;
+    padding: 15px;
+}
+
+#image {
+    position: absolute;
+    border-radius: 50%;
+    height: 120px;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+#large {
+    --size: 120px;
+}
+
+#small {
+    --size: 30px;
+    margin-top: 10px;
+}
+
+.yinyang {
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.whitehalfcircle {
+    background: white;
+    height: 100%;
+    width: 50%;
+    border-top-left-radius: var(--size);
+    border-bottom-left-radius: var(--size);
+    position: absolute;
+}
+
+.blackhalfcircle {
+    background: black;
+    height: 100%;
+    width: 50%;
+    border-top-right-radius: var(--size);
+    border-bottom-right-radius: var(--size);
+    position: absolute;
+    margin-left: 50%;
+}
+
+.whitecircle {
+    background: white;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 25%;
+}
+
+.blackdot {
+    background: black;
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 33%;
+    margin-top: 33%;
+}
+
+.blackcircle {
+    background: black;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 50%;
+}
+
+.whitedot {
+    background: white;
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 33%;
+    margin-top: 33%;
+}
+
+.name {
+    margin-top: 25px;
+    font-size: 50px;
+}
