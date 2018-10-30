@@ -21,7 +21,7 @@ p {
 }
 
 .blink {
-    animation: blink 2s infinite;
+    animation: blink 3s infinite;
 }
 
 section {
@@ -51,7 +51,7 @@ section {
     position: absolute;
     transition: opacity 1s ease-in-out;
     opacity: 1;
-    animation: blink 2s infinite;
+    animation: blink 3s infinite;
 }
 
 .link {
