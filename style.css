@@ -115,7 +115,9 @@ h2 {
     z-index: 1;
     opacity: 0.3;
 }
-
+#image:hover {
+    opacity: 1;
+}
 #large {
     --size: 120px;
 }
