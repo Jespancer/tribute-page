@@ -5,19 +5,24 @@ body {
     font-size: 16px;
 }
 
+#tribute-info {}
+
 .flexbox {
     display: flex;
-    justify-content: center;
+    align-content: center;
+}
+
+#topbutton {
+    position: fixed;
+    z-index: 10;
+    padding: 10px;
 }
 
 #tribute-info {
     margin: auto;
     width: 500px;
     font-family: Arial;
-}
-
-p {
-    z-index: 200;
+    padding-top: 10px;
 }
 
 .blink {
@@ -27,7 +32,6 @@ p {
 section {
     height: 100vh;
     z-index: -20;
-    padding: 30px;
 }
 
 @keyframes blink {
@@ -64,7 +68,7 @@ section {
     opacity: 0.5;
 }
 
-footer {
+#footer {
     height: 50px;
     width: 100%;
     background: white;
@@ -73,13 +77,28 @@ footer {
     font-family: Arial;
 }
 
+.name {
+    position: absolute;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 36px;
+    color: black;
+    margin-left: 70px;
+}
+
+#madewith,
+#byjespancer {
+    position: absolute;
+}
+
 #madewith {
-    margin-right: 5px;
+    margin-right: -400px;
 }
 
 #byjespancer {
     margin-left: 5px;
 }
+
 
 #section2 {
     background: white;
@@ -111,15 +130,18 @@ h2 {
 #image {
     position: absolute;
     border-radius: 50%;
-    height: 120px;
+    height: 60px;
     z-index: 1;
     opacity: 0.3;
+    transition-duration: 1s;
 }
+
 #image:hover {
-    opacity: 1;
+    opacity: .67;
 }
+
 #large {
-    --size: 120px;
+    --size: 60px;
 }
 
 #small {
@@ -196,9 +218,4 @@ h2 {
     position: absolute;
     margin-left: 33%;
     margin-top: 33%;
-}
-
-.name {
-    margin-top: 25px;
-    font-size: 50px;
 }

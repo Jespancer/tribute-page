@@ -15,3 +15,5 @@ After bio - pictures of him at different times in his life and a bit of text abo
 if height is too low then change from 100vh to a set amount of pixels
 
 Make the website look ok and everything be readable on all aspect ratios and sizes.
+
+title: have a white background
