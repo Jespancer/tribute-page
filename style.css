@@ -3,9 +3,8 @@ body {
     color: white;
     margin: 0;
     font-size: 16px;
+    font-family: Roboto, Sans-serif;
 }
-
-#tribute-info {}
 
 .flexbox {
     display: flex;
@@ -15,13 +14,13 @@ body {
 #topbutton {
     position: fixed;
     z-index: 10;
-    padding: 10px;
+    padding: 5px;
 }
 
 #tribute-info {
     margin: auto;
     width: 500px;
-    font-family: Arial;
+    font-family: Roboto, Sans-serif;
     padding-top: 10px;
 }
 
@@ -36,7 +35,7 @@ section {
 
 @keyframes blink {
     0% {
-        opacity: 0.33;
+        opacity: 0.50;
     }
 
     50% {
@@ -44,61 +43,47 @@ section {
     }
 
     100% {
-        opacity: 0.33;
+        opacity: 0.50;
     }
 }
 
 #twitter {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+#twitterlink {
     text-decoration: none;
-    color: black;
-    font-size: 16px;
-    position: absolute;
+    font-size: 30px;
+    color: #00aced;
     transition: opacity 1s ease-in-out;
     opacity: 1;
     animation: blink 3s infinite;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
 }
 
-.link {
-    text-decoration: none;
-    color: black;
-    padding: 2px;
+#twitterlink:hover {
+    animation: noblink 3s;
 }
 
-#twitter:hover {
-    opacity: 0.5;
+@keyframes noblink {
+    100% {
+        opacity: 1;
+        color: #00aced;
+    }
 }
 
-#footer {
-    height: 50px;
+#footer1 {
     width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: black;
     background: white;
-    color: black;
-    margin: auto;
-    font-family: Arial;
+    text-align: center;
 }
-
-.name {
-    position: absolute;
-    margin: 0;
-    margin-top: 10px;
-    font-size: 36px;
-    color: black;
-    margin-left: 70px;
-}
-
-#madewith,
-#byjespancer {
-    position: absolute;
-}
-
-#madewith {
-    margin-right: -400px;
-}
-
-#byjespancer {
-    margin-left: 5px;
-}
-
 
 #section2 {
     background: white;
@@ -106,12 +91,13 @@ section {
     position: relative;
 }
 
-h2 {
+.bigword {
     position: absolute;
     z-index: -2;
     font-size: 449px;
     opacity: 0.05;
     margin: auto;
+    font-family: serif;
 }
 
 #quotes {
@@ -119,12 +105,14 @@ h2 {
     flex-wrap: wrap;
     width: 900px;
     margin: auto;
+    font-family: serif;
 }
 
 .quote {
     margin: auto;
     width: 250px;
     padding: 15px;
+    font-family: serif;
 }
 
 #image {
@@ -137,19 +125,13 @@ h2 {
 }
 
 #image:hover {
-    opacity: .67;
+    opacity: 1;
 }
 
-#large {
-    --size: 60px;
-}
-
-#small {
-    --size: 30px;
-    margin-top: 10px;
-}
+/*Yin and Yang:*/
 
 .yinyang {
+    --size: 60px;
     height: var(--size);
     width: var(--size);
     border-radius: 50%;
