@@ -1,36 +1,62 @@
 body {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     margin: 0;
-    font-size: 16px;
+    font-size: 1.5rem;
     font-family: Roboto, Sans-serif;
-}
-
-.flexbox {
-    display: flex;
-    align-content: center;
-}
-
-#topbutton {
-    position: fixed;
-    z-index: 10;
-    padding: 5px;
 }
 
 #tribute-info {
     margin: auto;
-    width: 500px;
-    font-family: Roboto, Sans-serif;
-    padding-top: 10px;
+    width: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.blink {
+h1 {
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: normal;
+}
+
+.box {
+    background: black;
+    color: white;
+    text-align: center;
+    width: 6rem;
+    height: 8rem;
+    margin: 0.5rem;
+}
+
+.quote {
+    font-family: serif;
+    width: 32rem;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background: black;
+    color: white;
+    padding: 2rem;
+    opacity: 0.80;
+}
+footer {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    color: white;
+    background: black;
+    text-align: center;
+}
+
+.link {
     animation: blink 3s infinite;
+    text-decoration-line: none;
 }
 
-section {
-    height: 100vh;
-    z-index: -20;
+.link:hover {
+    text-decoration-line: underline;
 }
 
 @keyframes blink {
@@ -47,78 +73,42 @@ section {
     }
 }
 
-#twitter {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-}
-
 #twitterlink {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 2rem;
     color: #00aced;
     transition: opacity 1s ease-in-out;
     opacity: 1;
     animation: blink 3s infinite;
     position: fixed;
-    bottom: 5px;
-    right: 5px;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    z-index: 10;
 }
 
 #twitterlink:hover {
-    animation: noblink 3s;
+    animation: twitterhover 3s;
 }
 
-@keyframes noblink {
+@keyframes twitterhover {
     100% {
         opacity: 1;
         color: #00aced;
     }
 }
 
-#footer1 {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    color: black;
-    background: white;
-    text-align: center;
-}
+/*Yin and Yang + Alan Watts image + top button:*/
 
-#section2 {
-    background: white;
-    color: black;
-    position: relative;
-}
-
-.bigword {
-    position: absolute;
-    z-index: -2;
-    font-size: 449px;
-    opacity: 0.05;
-    margin: auto;
-    font-family: serif;
-}
-
-#quotes {
-    display: flex;
-    flex-wrap: wrap;
-    width: 900px;
-    margin: auto;
-    font-family: serif;
-}
-
-.quote {
-    margin: auto;
-    width: 250px;
-    padding: 15px;
-    font-family: serif;
+#topbutton {
+    position: fixed;
+    z-index: 10;
+    padding: 0.5rem;
 }
 
 #image {
     position: absolute;
     border-radius: 50%;
-    height: 60px;
+    height: 4rem;
     z-index: 1;
     opacity: 0.3;
     transition-duration: 1s;
@@ -128,10 +118,8 @@ section {
     opacity: 1;
 }
 
-/*Yin and Yang:*/
-
 .yinyang {
-    --size: 60px;
+    --size: 4rem;
     height: var(--size);
     width: var(--size);
     border-radius: 50%;
