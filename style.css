@@ -1,7 +1,6 @@
-body {
-    background: white;
-    color: black;
+#main {
     margin: 0;
+    background-image: linear-gradient(to bottom, white, gray);
     font-size: 1.5rem;
     font-family: Roboto, Sans-serif;
 }
@@ -10,45 +9,72 @@ body {
     margin: auto;
     width: 50rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
 }
 
-h1 {
-    margin-bottom: 0;
+.center {
     text-align: center;
+}
+
+#title {
+    margin-bottom: 0;
     margin-top: 1rem;
     font-weight: normal;
 }
 
-.box {
-    background: black;
-    color: white;
-    text-align: center;
-    width: 6rem;
-    height: 8rem;
-    margin: 0.5rem;
+hr {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.wiki {
+    display: flex;
+    width: 50rem;
+}
+
+#img-div {
+    margin-right: 1rem;
+    width: 100%;
+}
+
+#image {
+    max-width: 100%;
+    display: block;
+}
+
+#img-caption {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.wiki-info {
+    margin: 0;
+    width: 120rem;
 }
 
 .quote {
-    font-family: serif;
-    width: 32rem;
     margin: auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    background: black;
-    color: white;
-    padding: 2rem;
-    opacity: 0.80;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+    width: 90%;
 }
+
+.nomarginbottom {
+    margin-bottom: 0;
+}
+
 footer {
     width: 100%;
     height: 3rem;
     line-height: 3rem;
+    font-size: 1rem;
     color: white;
     background: black;
-    text-align: center;
 }
+
+/* Links */
 
 .link {
     animation: blink 3s infinite;
@@ -73,12 +99,12 @@ footer {
     }
 }
 
+/* Twitter Link */
+
 #twitterlink {
     text-decoration: none;
     font-size: 2rem;
     color: #00aced;
-    transition: opacity 1s ease-in-out;
-    opacity: 1;
     animation: blink 3s infinite;
     position: fixed;
     bottom: 0.5rem;
@@ -87,35 +113,21 @@ footer {
 }
 
 #twitterlink:hover {
-    animation: twitterhover 3s;
+    animation: twitterhover;
 }
 
 @keyframes twitterhover {
     100% {
         opacity: 1;
-        color: #00aced;
     }
 }
 
-/*Yin and Yang + Alan Watts image + top button:*/
+/* Yin and Yang + Top Button */
 
 #topbutton {
     position: fixed;
     z-index: 10;
     padding: 0.5rem;
-}
-
-#image {
-    position: absolute;
-    border-radius: 50%;
-    height: 4rem;
-    z-index: 1;
-    opacity: 0.3;
-    transition-duration: 1s;
-}
-
-#image:hover {
-    opacity: 1;
 }
 
 .yinyang {
@@ -124,6 +136,12 @@ footer {
     width: var(--size);
     border-radius: 50%;
     animation: spin 5s linear infinite;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+}
+
+.yinyang:hover {
+    opacity: 0.5;
 }
 
 @keyframes spin {
